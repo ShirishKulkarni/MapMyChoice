@@ -1,0 +1,26 @@
+@CHARSET "ISO-8859-1";
+.mapClass
+{
+	width: 900px;
+	height: 600px;
+	border: solid black 1px;
+	float: left;
+	margin-left: 10px;
+	box-shadow: 10px 10px 5px #888888;
+}
+
+
+.legendClass
+{
+	width: 300px;
+	height: 600px;
+	border: solid black 1px;
+	float:right;
+	margin-right: 10px;
+	box-shadow: 10px 10px 5px #888888;
+
+}
+body
+{
+	font-family: Segoe UI;
+}

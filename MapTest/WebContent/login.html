@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <title>Home Page</title>
+    <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAPDUET0Qt7p2VcSk6JNU1sBSM5jMcmVqUpI7aqV44cW1cEECiThQYkcZUPRJn9vy_TWxWvuLoOfSFBw" type="text/javascript"></script>
+    <style>
+    a,body
+    {
+    	font-family: Segoe UI;
+    	font-size: 11px;
+    }
+    .my-legend .legend-title {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 90%;
+    }
+  .my-legend .legend-scale ul {
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    float: left;
+    list-style: none;
+    }
+  .my-legend .legend-scale ul li {
+    font-size: 80%;
+    list-style: none;
+    margin-left: 0;
+    line-height: 18px;
+    margin-bottom: 2px;
+    }
+  .my-legend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 16px;
+    width: 30px;
+    margin-right: 5px;
+    margin-left: 0;
+    border: 1px solid #999;
+    }
+  .my-legend .legend-source {
+    font-size: 70%;
+    color: #999;
+    clear: both;
+    }
+  .my-legend a {
+    color: #777;
+    }
+    </style>
+  </head>
+ 
+  <body onunload="GUnload()">
+      
+  <div id="header" style="width:100%;float:left;  height: 50px;border:solid black 1px"></div>
+    
+  <div id="body" style="border:solid black 1px;width: 1264px;height:645px;"	>
+          <div id="map" style="width: 900px;float:left;  height: 400px;border:solid black 1px;margin-top: 1%"></div>       
+       <div id="legend" style="width: 340px;overflow:auto;float:right; height: 400px;border:solid black 1px;margin-top: 1%">
+     <div class='my-legend' style="margin-top: 5%;margin-left: 2%">
+
+<!--   <img src="images/walle.jpg" alt="nopic" /> -->
+<div id="pdfContent">
+  <div class='legend-scale'>
+  <ul class='legend-labels' style="border:solid black 1px">
+    <li><span class="legend" id="redLegend" style='background:red;border:solid black 1px'></span>Red</li>
+    <li><span class="legend" id="yellowLegend" style='background:blue;border:solid black 1px'></span>Blue</li>
+    <li><span class="legend" id="greenLegend" style='background:green;border:solid black 1px'></span>Green</li>
+    <li>
+    <img id="preview" src="http://maps.googleapis.com/maps/api/staticmap?center=40.714728,-73.998672&zoom=12&size=256x256&format=png&sensor=false">
+    </img>
+    <canvas id="myCanvas"/>
+    </li>
+     </ul>
+     </div>
+</div>
+
+</div>
+<div id="side_bar"  style="width: 195px;overflow:auto;float:right; height: 380px;border:solid black 1px;margin-right: 5%">
+</div> 
+ </div>
+
+	<div id="editor" class="bypass"></div>
+ <button id='generatePdf'><h3>PDF</h3></button>
+<button id='moreButton'><h3>More Details</h3></button>
+ </div>
+
+    <script src="js/highcharts.js"></script>
+    <script src="js/exporting.js"></script>
+    <script src="js/jquery.nivo.slider.js"></script>
+  
+   
+    <script type="text/javascript" src="js/jspdf/FileSaver.js"></script>
+    <script type="text/javascript" src="js/libs/Blob.js"></script>
+	<script type="text/javascript" src="js/libs/BlobBuilder.js"></script>
+
+	<script type="text/javascript" src="js/libs/deflate.js"></script>
+	<script type="text/javascript" src="js/libs/adler32cs.js"></script>
+	 <script type="text/javascript" src="js/jspdf/jspdf.js"></script>
+	<script type="text/javascript" src="js/jspdf/jspdf.plugin.addimage.js"></script>
+	<script type="text/javascript" src="js/jspdf/jspdf.plugin.from_html.js"></script>
+	<script type="text/javascript" src="js/jspdf/jspdf.plugin.ie_below_9_shim.js"></script>
+	<script type="text/javascript" src="js/jspdf/jspdf.plugin.sillysvgrenderer.js"></script>
+	<script type="text/javascript" src="js/jspdf/jspdf.plugin.split_text_to_size.js"></script>
+	<script type="text/javascript" src="js/jspdf/jspdf.plugin.standard_fonts_metrics.js"></script>
+    
+  <script type="text/javascript" src="js/home.js"></script>
+    
+    
+
+	
+	 </body>
+</html>
+
+
+
+
