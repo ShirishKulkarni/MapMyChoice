@@ -5,27 +5,29 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 
-
+/**
+ * 
+ * @author Shirish
+ *
+ */
 public class Temp {
 
-	public static void main(String[] args)
-	{
-		
-		try {
-		    URL url = new URL("http://media.mongodb.org/zips.json");
-		    URLConnection connection = url.openConnection();
-		    System.out.println(connection);
-		    BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()));
-		    String line = null;
-		    
+	public static void main(String[] args) {
 
-		    while ((line = reader.readLine()) != null) {
-		       System.out.println(line);
-		    }
-		    reader.close();
+		try {
+			URL url = new URL("http://media.mongodb.org/zips.json");
+			URLConnection connection = url.openConnection();
+			System.out.println(connection);
+			BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()));
+			String line = null;
+
+			while ((line = reader.readLine()) != null) {
+				System.out.println(line);
+			}
+			reader.close();
 
 		} catch (MalformedURLException e) {
-		   e.printStackTrace();
+			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
